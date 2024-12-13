@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('sobre')">Sobre</a></li>
+            <li><a href="#" onclick="showPage('contato')">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page active">
+        <h1>Games em Destaque</h1>
+        <div class="games-grid">
+            <div class="game-card" data-game="cyberpunk">
+                <img src="images/game1.png" alt="Cyberpunk 2077">
+                <h3>Cyberpunk 2077</h3>
+                <p>RPG de ação em mundo aberto</p>
+                <div class="price">R$ 199,99</div>
+                <button class="btn" onclick="showGameDetails('cyberpunk')">Ver Detalhes</button>
+            </div>
+            <div class="game-card" data-game="god-of-war">
+                <img src="images/game2.png" alt="God of War">
+                <h3>God of War</h3>
+                <p>Aventura épica nórdica</p>
+                <div class="price">R$ 199,99</div>
+                <button class="btn" onclick="showGameDetails('god-of-war')">Ver Detalhes</button>
+            </div>
+            <div class="game-card" data-game="rdr2">
+                <img src="images/game3.webp" alt="Red Dead Redemption 2">
+                <h3>Red Dead Redemption 2</h3>
+                <p>Ação no velho oeste</p>
+                <div class="price">R$ 249,99</div>
+                <button class="btn" onclick="showGameDetails('rdr2')">Ver Detalhes</button>
+            </div>
+            <div class="game-card" data-game="thefinals">
+                <img src="images/game4.avif" alt="The Finals">
+                <h3>The Finals</h3>
+                <p>FPS frenético</p>
+                <div class="price">R$ 0,00</div>
+                <button class="btn" onclick="showGameDetails('thefinals')">Ver Detalhes</button>
+            </div>
+            <div class="game-card" data-game="partyanimals">
+                <img src="images/game5.avif" alt="Party Animals">
+                <h3>Party Animals</h3>
+                <p>Porradaria entre animais</p>
+                <div class="price">R$ 64,95</div>
+                <button class="btn" onclick="showGameDetails('partyanimals')">Ver Detalhes</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-details" class="page">
+        <button class="back-button" onclick="showPage('home')">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+        <div class="game-details-content">
+            <div class="slider-container">
+                <div class="slider">
+                    <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+                    <div class="slides"></div>
+                    <button class="slider-btn next" onclick="nextSlide()">❯</button>
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+            <div class="game-info">
+                <h1 class="game-title"></h1>
+                <div class="game-meta">
+                    <span class="developer"></span>
+                    <span class="release-date"></span>
+                    <span class="genre"></span>
+                </div>
+                <div class="price-section">
+                    <span class="detail-price"></span>
+                    <button class="btn buy-btn">Comprar Agora</button>
+                </div>
+                <div class="description"></div>
+                <div class="requirements">
+                    <h3>Requisitos do Sistema</h3>
+                    <div class="req-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre" class="sobre">
+        <div class="sobre-content">
+            <h1 class="h1_sobre">Sobre Nós</h1>
+            <p>Somos uma loja especializada em jogos digitais, trazendo os melhores títulos do mercado com os melhores preços.</p>
+            <p>Nossa missão é proporcionar a melhor experiência de compra para os gamers, com atendimento de qualidade e preços competitivos.</p>
+            <p>Trabalhamos com as principais desenvolvedoras e publicadoras do mercado, garantindo produtos originais e suporte completo.</p>
+            <img class="logo" src="images/loja.webp" alt="Logo da loja">
+        </div>
+    </div>
+
+    <div id="contato" class="contato">
+        <div class="contato-content">
+            <h1>Entre em Contato</h1>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
