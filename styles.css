@@ -91,7 +91,7 @@ nav a:hover {
 .game-card {
     background-color: #23272a;
     border-radius: 10px;
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem;
     text-align: center;
     transition: transform 0.2s;
 }
